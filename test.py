@@ -1,16 +1,12 @@
-import toml 
+import keyboard
 
-current_value = 0
+def on_key_event(event):
+    if event.event_type == keyboard.KEY_DOWN:
+        if(event.name.lower() =='s'):
+                print("S")
+        elif(event.name.lower() =='r'):
+                print("r")
+        elif(event.name.lower() =='p'):
+                print("p")               
 
-def add_number(number):
-        global current_value
-        current_value = max(0, current_value + number)
-
-
-print(current_value)
-
-
-add_number(-2)
-
-
-print(current_value)
+keyboard.hook(on_key_event)

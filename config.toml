@@ -3,7 +3,7 @@
     client_id = "64fesixbrjcirq48vv1gf318xx7ku2"
     bot_nick = "Vote-bot"
     bot_prefix = "!"
-    channel = "markizzor"
+    channel = "omar_abdelghany2000"
 
 
 [commands.global."!thumbsup"]
