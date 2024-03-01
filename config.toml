@@ -1,0 +1,37 @@
+[tmi]
+    token = "oauth:iy5pa64apsi57uaq0komrqffn7oo1t"
+    client_id = "64fesixbrjcirq48vv1gf318xx7ku2"
+    bot_nick = "Vote-bot"
+    bot_prefix = "!"
+    channel = "markizzor"
+
+
+[commands.global."!thumbsup"]
+    rate = 2
+[commands.global."!thumbsdown"]
+    rate = -2
+
+
+[commands.paid."cheer100 yay"]
+    rate = 2
+[commands.paid."cheer100 boo"]
+    rate = -2
+   
+
+[commands.subscribers."!sickjam"]
+    rate = 2
+[commands.subscribers."!kewlbeanz"]
+    rate = 2
+[commands.subscribers."!hype"]
+    rate = 2
+[commands.subscribers."!rude"]
+    rate = -2
+[commands.subscribers."!uncoolbeans"]
+    rate = -2
+[commands.subscribers."!canceled"]
+    rate = -2
+[commands.subscribers."!unhype"]
+    rate = -2
+   
+
+

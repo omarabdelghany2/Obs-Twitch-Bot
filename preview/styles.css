@@ -1,0 +1,13 @@
+.rotate-container {
+    width: 400px; /* Adjust the container size as needed */
+    height: 400px; /* Adjust the container size as needed */
+    overflow: hidden;
+}
+
+.rotate-container img {
+    width: 100%;
+}
+
+#rotateImage {
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
