@@ -4,11 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pyqt6 = "*"
 twitchio = "*"
 toml = "*"
 beautifulsoup4 = "*"
 obsws-python = "*"
+pynput = "*"
 
 [dev-packages]
 

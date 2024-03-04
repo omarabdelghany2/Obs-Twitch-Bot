@@ -1,37 +1,57 @@
 [tmi]
-    token = "oauth:iy5pa64apsi57uaq0komrqffn7oo1t"
-    client_id = "64fesixbrjcirq48vv1gf318xx7ku2"
-    bot_nick = "Vote-bot"
+    token = "oauth:woc3xptyp8wpa65kyamw0i0frn652b"
     bot_prefix = "!"
-    channel = "omar_abdelghany2000"
+    channel = "markizzor"
 
+[settings]
+    host = "localhost"
+    port = 4444
+    password = "password"
+    goal = 100
+    source_name = "Browser 2"
+
+[hotkeys]
+    start = "s"
+    pause = "p"
+    reset = "r"
 
 [commands.global."!thumbsup"]
     rate = 2
+    message = "has voted"
 [commands.global."!thumbsdown"]
     rate = -2
+    message = "has voted"
 
 
 [commands.paid."cheer100 yay"]
     rate = 2
+    message = "has voted"
 [commands.paid."cheer100 boo"]
     rate = -2
+    message = "has voted"
    
 
 [commands.subscribers."!sickjam"]
     rate = 2
+    message = "has voted"
 [commands.subscribers."!kewlbeanz"]
     rate = 2
+    message = "has voted"
 [commands.subscribers."!hype"]
     rate = 2
+    message = "has voted"
 [commands.subscribers."!rude"]
     rate = -2
+    message = "has voted"
 [commands.subscribers."!uncoolbeans"]
     rate = -2
+    message = "has voted"
 [commands.subscribers."!canceled"]
     rate = -2
+    message = "has voted"
 [commands.subscribers."!unhype"]
     rate = -2
+    message = "has voted"
    
 
 

@@ -5,15 +5,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="styles.css" rel="stylesheet"/>
+<link href="../assets/output.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
 <title>Rotate Image</title>
 </head>
 <body>
 <div class="rotate-container">
-<img alt="Rotatable Image" id="rotateImage" src="needle.png"/>
+<img alt="background" id="background" src="../assets/segment-3.png"/>
+<img alt="Rotatable Image" id="rotateImage" src="../assets/needle.png" style="transform: rotate(90.0deg);"/>
 </div>
-<div class="values">
-<div id="oldvalue">100</div>
-<div id="newvalue">100</div>
+<div class="text">
+<div class="neg hide">-2</div>
+<div id="per">50%</div>
+<div class="pos hide">+2</div>
 </div>
 <script src="script.js"></script>
 </body>

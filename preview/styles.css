@@ -1,3 +1,11 @@
+#background {
+    position: fixed;
+    width: 400px;
+    left: .5rem;
+    top: -1.5rem;
+    z-index: -1;
+}
+
 .rotate-container {
     width: 400px; /* Adjust the container size as needed */
     height: 400px; /* Adjust the container size as needed */
@@ -8,6 +16,50 @@
     width: 100%;
 }
 
+.text {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    position: fixed;
+    top: 12.5rem;
+    left: 3rem;
+    width: 21rem;
+}
+
+.pos {
+    animation: 1s fadeout 1s forwards;
+}
+
+.neg {
+    animation: 1s fadeout 1s forwards;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.values {
+    display: none;
+}
+
 #rotateImage {
-    transition: transform 0.5s ease; /* Add a smooth transition effect */
+    transition: transform .5s ease; /* Add a smooth transition effect */
+}
+
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    
+    
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 }
