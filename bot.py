@@ -25,6 +25,13 @@ class Bot(commands.Bot):
     def __init__(self, rewrite_html, refresh_browser):
         super().__init__(token=TMI_TOKEN, prefix=TMI_BOT_PREFIX, initial_channels=[TMI_CHANNEL])
         self.ArrayOfPeopleNames = []
+        self.sickjamArray = []
+        self.kewlbeanz = []
+        self.hype = []
+        self.rude = []
+        self.uncoolbeans = []
+        self.canceled = []
+        self.unhype = []
         self.current_value = GOAL / 2
         self.points = 0
         self.rewrite_html = rewrite_html
@@ -103,12 +110,50 @@ class Bot(commands.Bot):
                     self.send_info()
                     await ctx.channel.send(f"{ctx.author.name} {GLOBAL_COMMANDS[first_part]['message']}")
             elif first_part in SUB_COMMANDS:
-                if not ctx.author.name.lower() in self.ArrayOfPeopleNames:
-                    if ctx.author.is_subscriber:
-                        self.add_number(SUB_COMMANDS[first_part]["rate"])
-                        self.ArrayOfPeopleNames.append(ctx.author.name.lower())
-                        self.send_info()
-                        await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
+                    if(first_part=="!sickjam"):
+                        if not (ctx.author.name.lower() in self.sickjamArray):
+                                self.add_number(SUB_COMMANDS[first_part]["rate"])
+                                self.sickjamArray.append(ctx.author.name.lower())
+                                self.send_info()
+                                await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
+                    elif(first_part=="!kewlbeanz"):
+                        if not (ctx.author.name.lower() in self.kewlbeanz):
+                                self.add_number(SUB_COMMANDS[first_part]["rate"])
+                                self.kewlbeanz.append(ctx.author.name.lower())
+                                self.send_info()
+                                await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
+                    elif(first_part=="!hype"):
+                        if not (ctx.author.name.lower() in self.hype):
+                                self.add_number(SUB_COMMANDS[first_part]["rate"])
+                                self.hype.append(ctx.author.name.lower())
+                                self.send_info()
+                                await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
+                    elif(first_part=="!rude"):
+                        if not (ctx.author.name.lower() in self.rude):
+                                self.add_number(SUB_COMMANDS[first_part]["rate"])
+                                self.rude.append(ctx.author.name.lower())
+                                self.send_info()
+                                await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
+                    elif(first_part=="!uncoolbeans"):
+                        if not (ctx.author.name.lower() in self.uncoolbeans):
+                                self.add_number(SUB_COMMANDS[first_part]["rate"])
+                                self.uncoolbeans.append(ctx.author.name.lower())
+                                self.send_info()
+                                await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
+                    elif(first_part=="!canceled"):
+                        if not (ctx.author.name.lower() in self.canceled):
+                                self.add_number(SUB_COMMANDS[first_part]["rate"])
+                                self.canceled.append(ctx.author.name.lower())
+                                self.send_info()
+                                await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
+                    elif(first_part=="!unhype"):
+                        if not (ctx.author.name.lower() in self.un):
+                                self.add_number(SUB_COMMANDS[first_part]["rate"])
+                                self.unhype.append(ctx.author.name.lower())
+                                self.send_info()
+                                await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")                                                                        
+                   
+                   
             elif ctx.content in PAID_COMMANDS:
                 self.add_number(PAID_COMMANDS[ctx.content]["rate"])
                 self.send_info()

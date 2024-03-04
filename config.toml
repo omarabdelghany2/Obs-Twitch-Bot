@@ -1,14 +1,14 @@
 [tmi]
     token = "oauth:woc3xptyp8wpa65kyamw0i0frn652b"
     bot_prefix = "!"
-    channel = "markizzor"
+    channel = "omar_abdelghany2000"
 
 [settings]
     host = "localhost"
-    port = 4444
+    port = 4455
     password = "password"
     goal = 100
-    source_name = "Browser 2"
+    source_name = "Browser"
 
 [hotkeys]
     start = "s"
