@@ -26,6 +26,7 @@ class Bot(commands.Bot):
         super().__init__(token=TMI_TOKEN, prefix=TMI_BOT_PREFIX, initial_channels=[TMI_CHANNEL])
         self.ArrayOfPeopleNames = []
         self.sickjamArray = []
+        self.frontbuttArray = []
         self.kewlbeanz = []
         self.hype = []
         self.rude = []
@@ -59,6 +60,14 @@ class Bot(commands.Bot):
         elif key_name == HOTKEYS["reset"]:
             self.current_value = GOAL / 2
             self.ArrayOfPeopleNames = []
+            self.sickjamArray = []
+            self.frontbuttArray = []
+            self.kewlbeanz = []
+            self.hype = []
+            self.rude = []
+            self.uncoolbeans = []
+            self.canceled = []
+            self.unhype = []
             self.points = 0
             self.send_info()
             print("Script reset")
@@ -122,6 +131,12 @@ class Bot(commands.Bot):
                                 self.kewlbeanz.append(ctx.author.name.lower())
                                 self.send_info()
                                 await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
+                    elif(first_part=="!frontbutt"):
+                        if not (ctx.author.name.lower() in self.frontbuttArray):
+                                self.add_number(SUB_COMMANDS[first_part]["rate"])
+                                self.frontbuttArray.append(ctx.author.name.lower())
+                                self.send_info()
+                                await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")            
                     elif(first_part=="!hype"):
                         if not (ctx.author.name.lower() in self.hype):
                                 self.add_number(SUB_COMMANDS[first_part]["rate"])
@@ -147,7 +162,7 @@ class Bot(commands.Bot):
                                 self.send_info()
                                 await ctx.channel.send(f"{ctx.author.name} {SUB_COMMANDS[first_part]['message']}")
                     elif(first_part=="!unhype"):
-                        if not (ctx.author.name.lower() in self.un):
+                        if not (ctx.author.name.lower() in self.unhype):
                                 self.add_number(SUB_COMMANDS[first_part]["rate"])
                                 self.unhype.append(ctx.author.name.lower())
                                 self.send_info()
